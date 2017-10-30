@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/user.css">
 </head>
 <body>
 <div class="lt_aside">
@@ -47,13 +47,46 @@
   <div class="main_nav">
     <ol class="breadcrumb">
       <li><a href="#">管理系统</a></li>
-      <li><a href="#" style="color:#999">首页</a></li>
+      <li><a href="#" style="color:#999">用户管理</a></li>
     </ol>
   </div>
 
-  <!--echarts-->
-  <div class="main_bar pull-left"></div>
-  <div class="main_pie pull-right"></div>
+  <div class="user_content">
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>序号</th>
+        <th>用户名</th>
+        <th>手机号</th>
+        <th>状态</th>
+        <th>操作</th>
+      </tr>
+      </thead>
+      <tbody class="text-center">
+      <!--挖坑-->
+      </tbody>
+    </table>
+    <nav aria-label="Page navigation">
+      <ul class="pagination" id="pagintor">
+        <!--<li>-->
+          <!--<a href="#" aria-label="Previous">-->
+            <!--<span aria-hidden="true">&laquo;</span>-->
+          <!--</a>-->
+        <!--</li>-->
+        <!--<li><a href="#">1</a></li>-->
+        <!--<li><a href="#">2</a></li>-->
+        <!--<li><a href="#">3</a></li>-->
+        <!--<li><a href="#">4</a></li>-->
+        <!--<li><a href="#">5</a></li>-->
+        <!--<li>-->
+          <!--<a href="#" aria-label="Next">-->
+            <!--<span aria-hidden="true">&raquo;</span>-->
+          <!--</a>-->
+        <!--</li>-->
+      </ul>
+    </nav>
+
+  </div>
 </div>
 
 
@@ -76,12 +109,26 @@
   </div>
 </div>
 
+
+<script id="data" type="text/html">
+  {{each rows v i}}
+     <tr>
+       <td>{{(page-1) * size + i + 1}}</td>
+       <td>{{v.username}}</td>
+       <td>{{v.mobile}}</td>
+       <td>{{v.isDelete == 1 ? "正常" : "禁用"}}</td>
+       <td><button class="btn btn-sm {{v.isDelete == 1 ?  'btn-danger' : 'btn-success'}}">{{v.isDelete == 1 ?  "禁用" : "正常"}}</button></td>
+     </tr>
+  {{/each}}
+</script>
+
 <script src="lib/jquery/jquery.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
-<script src="lib/echarts/echarts.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
-<script src="js/index.js"></script>
+<script src="js/user.js"></script>
 </body>
 </html>

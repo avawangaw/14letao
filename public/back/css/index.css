@@ -1,12 +1,10 @@
 .main_bar {
-  float: left;
   margin-left: 200px;
   width: 400px;
   height: 400px;
 }
 .main_pie {
   margin-left: 100px;
-  float: left;
   width: 400px;
   height: 500px;
 }

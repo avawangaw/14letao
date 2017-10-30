@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/index.css">
+  <!--<link rel="stylesheet" href="css/index.css">-->
 </head>
 <body>
 <div class="lt_aside">
@@ -20,13 +20,13 @@
   </div>
   <div class="aside_category">
     <ul>
-      <li><a href="user.html" class="now"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户管理</a></li>
+      <li><a href="user.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户管理</a></li>
       <li>
         <a href="#">
           <span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;分类管理
         </a>
-        <div class="tier" style="display: none;">
-            <a href="first.html">一级分类</a>
+        <div class="tier" style="display: block;">
+            <a href="first.html" class="now">一级分类</a>
             <a href="second.html">二级分类</a>
         </div>
       </li>
@@ -47,13 +47,10 @@
   <div class="main_nav">
     <ol class="breadcrumb">
       <li><a href="#">管理系统</a></li>
-      <li><a href="#" style="color:#999">首页</a></li>
+      <li><a href="#">管理系统</a></li>
+      <li><a href="#" style="color:#999">一级分类</a></li>
     </ol>
   </div>
-
-  <!--echarts-->
-  <div class="main_bar pull-left"></div>
-  <div class="main_pie pull-right"></div>
 </div>
 
 
@@ -82,6 +79,6 @@
 <script src="lib/nprogress/nprogress.js"></script>
 <script src="lib/echarts/echarts.min.js"></script>
 <script src="js/common.js"></script>
-<script src="js/index.js"></script>
+<!--<script src="js/index.js"></script>-->
 </body>
 </html>

@@ -1,0 +1,15 @@
+.user_content{
+  margin-left: 200px;
+  margin-right: 20px;
+}
+tr th{
+  text-align: center;
+}
+.user_content .table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+#pagintor {
+  margin-right: 20px;
+  float: right;
+}

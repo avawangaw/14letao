@@ -25,12 +25,7 @@ $(document).ajaxStop(function () {
   }, 600);
 });
 
-//左侧导航栏点击高亮
 $(function () {
-  $(".aside_category li a").on("click", function () {
-    $(this).addClass("now").parent().siblings().children().removeClass("now")
-  });
-  
   //分类显示与隐藏
   $(".tier").prev().on("click", function () {
     $(this).next().slideToggle();
