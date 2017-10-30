@@ -49,7 +49,7 @@ $(function() {
       data: $form.serialize(),
       success: function (msg) {
         if (msg.success) {
-          // location.href = "index.html";
+          location.href = "index.html";
         } else {
           if (msg.error === 1000) {
             validator.updateStatus("username", "INVALID", "callback");
