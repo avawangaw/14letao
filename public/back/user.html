@@ -66,23 +66,10 @@
       <!--挖坑-->
       </tbody>
     </table>
+
+    <!--分页-->
     <nav aria-label="Page navigation">
       <ul class="pagination" id="pagintor">
-        <!--<li>-->
-          <!--<a href="#" aria-label="Previous">-->
-            <!--<span aria-hidden="true">&laquo;</span>-->
-          <!--</a>-->
-        <!--</li>-->
-        <!--<li><a href="#">1</a></li>-->
-        <!--<li><a href="#">2</a></li>-->
-        <!--<li><a href="#">3</a></li>-->
-        <!--<li><a href="#">4</a></li>-->
-        <!--<li><a href="#">5</a></li>-->
-        <!--<li>-->
-          <!--<a href="#" aria-label="Next">-->
-            <!--<span aria-hidden="true">&raquo;</span>-->
-          <!--</a>-->
-        <!--</li>-->
       </ul>
     </nav>
 
@@ -91,7 +78,7 @@
 
 
 <!--模态框-->
-<div class="modal fade" tabindex="-1" id="logout">
+<div class="modal fade" tabindex="-1" id="fd_st">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -99,11 +86,11 @@
         <h4 class="modal-title">温馨提示</h4>
       </div>
       <div class="modal-body">
-        <p class="text-danger"> <span class="glyphicon glyphicon-info-sign"></span>您确定要退出后台管理系统吗？</p>
+        <p class="text-danger"> <span class="glyphicon glyphicon-info-sign"></span>您确定要禁用此用户吗？</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-        <button type="button" class="logout_sure btn btn-primary">确定</button>
+        <button type="button" class="comfirm logout_sure btn btn-primary">确定</button>
       </div>
     </div>
   </div>
@@ -117,10 +104,13 @@
        <td>{{v.username}}</td>
        <td>{{v.mobile}}</td>
        <td>{{v.isDelete == 1 ? "正常" : "禁用"}}</td>
-       <td><button class="btn btn-sm {{v.isDelete == 1 ?  'btn-danger' : 'btn-success'}}">{{v.isDelete == 1 ?  "禁用" : "正常"}}</button></td>
+       <td data-id="{{v.id}}" data-isDelete="{{v.isDelete}}"><button class="btn btn-sm {{v.isDelete == 1 ?  'btn-danger' : 'btn-success'}}">{{v.isDelete == 1 ?  "禁用" : "正常"}}</button></td>
      </tr>
   {{/each}}
 </script>
+<!--<script id="userdata" type="text/html">-->
+  <!--<p class="text-danger"> <span class="glyphicon glyphicon-info-sign"></span>您确定要禁用{{}}吗？</p>-->
+<!--</script>-->
 
 <script src="lib/jquery/jquery.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>

@@ -14,8 +14,6 @@ $(function () {
         pageSize: pageSize
       },
       success: function (msg) {
-        console.log(msg);
-        console.log(typeof msg.rows);
         var html = template("data", msg);
         document.querySelector("tbody").innerHTML = html;
       
@@ -29,7 +27,33 @@ $(function () {
             rend();
           }
         });
+        //  禁用用户
+        $("tbody").on("click", ".btn", function () {
+          var id = $(this).parent().data("id");
+          var isDelete = $(this).parent().data("isdelete");
+          isDelete = isDelete == 1 ? 0 : 1;
+          //弹出模态框
+          $("#fd_st").modal("show");
+          $(".comfirm").off().on("click", function () {
+            $.ajax({
+              type: "post",
+              url: "/user/updateUser",
+              data: {
+                id: id,
+                isDelete: isDelete
+              },
+              success: function (msg) {
+                $("#fd_st").modal("hide");
+                if (msg.success) {
+                  rend();
+                }
+              }
+            });
+          })
+        })
       }
     });
   }
+  
+
 });
