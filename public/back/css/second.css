@@ -1,0 +1,30 @@
+.second_content {
+  margin: 0 15px;
+}
+.add_cate{
+  margin-bottom: 15px;
+}
+.table th,
+.table tbody>tr>td{
+  text-align: center;
+  vertical-align: middle;
+}
+.table img {
+  height: 40px;
+}
+.form-group {
+  margin: 15px 0;
+}
+.form-group img {
+  width: 100px;
+  height: 100px;
+}
+.file{
+  position: relative;
+}
+.file input[type="file"] {
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  opacity: 0;
+}
