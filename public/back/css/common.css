@@ -76,15 +76,17 @@ a:link, a:visited, a:hover, a:active {
 
 
 /*main_beg*/
-.main_top {
+.lt_main {
   margin-left: 180px;
+  transition: all 2s;
+}
+.lt_main.now{
+  margin-left: 0px;
+}
+.main_top {
   height: 50px;
   background-color: #3c8dbc;
   padding: 16px 10px;
-  transition: all 2s;
-}
-.main_top.now {
-  margin-left: 0px;
 }
 .main_top a{
   color: #fff;
@@ -92,5 +94,16 @@ a:link, a:visited, a:hover, a:active {
 }
 .main_nav{
   margin-top: 15px;
-  margin-left: 195px;
+  padding-left: 15px;
+}
+
+/*!*表格*!*/
+/*.table.table-bordered {*/
+  /*margin-right: 20px;*/
+/*}*/
+
+/*分页*/
+#pagintor {
+  margin-right: 20px;
+  float: right;
 }

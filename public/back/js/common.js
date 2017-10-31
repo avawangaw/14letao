@@ -36,7 +36,9 @@ $(function () {
 $(function () {
   $(".menu").click(function () {
     $(".lt_aside").toggleClass("now");
-    $(".main_top").toggleClass("now");
+    // $(".main_top").toggleClass("now");
+    // $(".main_nav").toggleClass("now");
+    $(".lt_main").toggleClass("now");
   });
 });
 

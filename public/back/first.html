@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/common.css">
-  <!--<link rel="stylesheet" href="css/index.css">-->
+  <link rel="stylesheet" href="css/first.css">
 </head>
 <body>
 <div class="lt_aside">
@@ -26,8 +26,8 @@
           <span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;分类管理
         </a>
         <div class="tier" style="display: block;">
-            <a href="first.html" class="now">一级分类</a>
-            <a href="second.html">二级分类</a>
+          <a href="first.html" class="now">一级分类</a>
+          <a href="second.html">二级分类</a>
         </div>
       </li>
       <li><a href="goods.html"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;商品管理</a></li>
@@ -44,12 +44,49 @@
       <span class="logout glyphicon glyphicon-log-out pull-right"></span>
     </a>
   </div>
-  <div class="main_nav">
+  <div class="main_nav ">
     <ol class="breadcrumb">
       <li><a href="#">管理系统</a></li>
-      <li><a href="#">管理系统</a></li>
+      <li><a href="#">分类管理</a></li>
       <li><a href="#" style="color:#999">一级分类</a></li>
     </ol>
+  </div>
+
+  <!--主体内容-->
+  <div class="first_content">
+    <button class="btn btn-default">添加分类</button>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>分类名称</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--挖坑-->
+      </tbody>
+    </table>
+
+    <!--分页-->
+    <nav aria-label="Page navigation">
+      <ul class="pagination full-right" id="pagintor">
+        <!--<li>-->
+          <!--<a href="#" aria-label="Previous">-->
+            <!--<span aria-hidden="true">&laquo;</span>-->
+          <!--</a>-->
+        <!--</li>-->
+        <!--<li><a href="#">1</a></li>-->
+        <!--<li><a href="#">2</a></li>-->
+        <!--<li><a href="#">3</a></li>-->
+        <!--<li><a href="#">4</a></li>-->
+        <!--<li><a href="#">5</a></li>-->
+        <!--<li>-->
+          <!--<a href="#" aria-label="Next">-->
+            <!--<span aria-hidden="true">&raquo;</span>-->
+          <!--</a>-->
+        <!--</li>-->
+      </ul>
+    </nav>
   </div>
 </div>
 
@@ -73,12 +110,21 @@
   </div>
 </div>
 
+<script id="first_cate" type="text/html">
+  {{each rows v i}}
+  <tr>
+    <td>{{(page - 1)* size + i + 1}}</td>
+    <td>{{v.categoryName}}</td>
+  </tr>
+  {{/each}}
+</script>
 <script src="lib/jquery/jquery.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
-<script src="lib/echarts/echarts.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
-<!--<script src="js/index.js"></script>-->
+<script src="js/first.js"></script>
 </body>
 </html>

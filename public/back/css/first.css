@@ -1,0 +1,11 @@
+.first_content {
+  margin-right: 20px;
+  padding-left: 15px;
+}
+.first_content .table {
+  margin-top: 15px;
+}
+.first_content .table th,
+.first_content .table td{
+  text-align: center;
+}
