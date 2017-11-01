@@ -49,7 +49,6 @@ $(function () {
       $(".first_infor").html(template("firstinfor", msg));
       //选择一级分类
       $(".first_infor").on("click","a", function () {
-        console.log($(this).text());
         $("#categoryId").val($(this).data("id"));
         $(".dropdown-text").text($(this).text());
       });
@@ -119,11 +118,13 @@ $(function () {
   
   
           //重置表单
-          $form.data("bootstrapValidator").resetForm();
           $form[0].reset();
+          $form.data("bootstrapValidator").resetForm();
           console.log($(".dropdown-text"));
           $(".dropdown-text").text("请选择一级分类");
           $("#display_img").attr("src", "img/none.png");
+          $("#brandLogo").val("");
+          $("#categoryId").val("");
         }
       }
     });

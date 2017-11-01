@@ -14,10 +14,15 @@ a:link, a:visited, a:hover, a:active {
 .text_center{
   text-align: center;
 }
+.clearfix {
+  display: block;
+  content: '';
+  clear: both;
+}
 
 /*aside_beg*/
 .lt_aside {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 180px;
   height: 100%;
@@ -84,6 +89,9 @@ a:link, a:visited, a:hover, a:active {
   margin-left: 0px;
 }
 .main_top {
+  /*position: fixed;*/
+  /*left: 180px;*/
+  /*top: 0px;*/
   height: 50px;
   background-color: #3c8dbc;
   padding: 16px 10px;
@@ -97,13 +105,20 @@ a:link, a:visited, a:hover, a:active {
   padding-left: 15px;
 }
 
-/*!*表格*!*/
-/*.table.table-bordered {*/
-  /*margin-right: 20px;*/
-/*}*/
-
 /*分页*/
 #pagintor {
   margin-right: 20px;
   float: right;
+}
+
+
+/*模态框中添加图片按钮*/
+.file{
+  position: relative;
+}
+.file input[type="file"] {
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  opacity: 0;
 }
